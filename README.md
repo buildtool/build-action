@@ -3,6 +3,7 @@
   <p align="center"><a href="https://github.com/features/actions">GitHub Action</a> for <a href="https://buildtools.io/commands/#build">Buildtool Build</a></p>
   <p align="center">
     <a href="https://github.com/buildtool/build-action/releases/latest"><img alt="GitHub release" src="https://img.shields.io/github/release/buildtool/build-action.svg?logo=github"></a>
+    <a href="https://github.com/marketplace/actions/github-action-for-build"><img alt="GitHub marketplace" src="https://img.shields.io/badge/marketplace-build--action-blue?logo=github"></a>
   </p>
 </p>
 
