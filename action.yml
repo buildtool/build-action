@@ -12,7 +12,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.dockerfile }}
+    - -f ${{ inputs.dockerfile }}
     - ${{ inputs.docker-build-args }}
 branding:
   icon: 'package'
