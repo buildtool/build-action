@@ -31,7 +31,10 @@ jobs:
         uses: actions/checkout@v1
       -
         name: Run build-tools build command
-        uses: buildtools/build-action@v1
+        uses: buildtool/build-action@v1
+        with:
+          dockerfile: dockerfiles/Dockerfile.build
+          docker-build-args: '--build-arg abc=123'
 ```
 
 ## Customizing
@@ -40,10 +43,14 @@ jobs:
 
 Following inputs can be used as `step.with` keys
 
-| Name                      | Type    | Default   | Description                              |
-|---------------------------|---------|-----------|------------------------------------------|
-| ` additional-docker-args` | String  |           | Extra arguments to `docker build`, supports  `-f <Dockerfile>` and multiple `--build-arg <KEY>=<VALUE>` params  |
+| Name                      | Type    | Default         | Description                                   |
+|---------------------------|---------|-----------------|-----------------------------------------------|
+| ` dockerfile`             | String  | `Dockerfile`    | To use a specific Dockerfile in your project  |
+| ` docker-build-args`      | String  |                 | Docker [build-arg]                            |
+
 
 ## License
 
 MIT. See `LICENSE` for more details.
+
+[build-arg]: https://docs.docker.com/engine/reference/commandline/#set-build-time-variables---build-arg
