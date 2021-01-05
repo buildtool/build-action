@@ -1,19 +1,14 @@
 name: 'GitHub Action for Build'
 description: 'Build docker image'
 inputs:
-  dockerfile:
-    description: 'specify Dockerfile to use'
-    required: false
-    default: 'Dockerfile'
-  docker-build-args:
-    description: 'docker build-args arguments'
+  args:
+    description: 'buildtool arguments, see https://buildtools.io/commands/#build for information'
     required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - -f ${{ inputs.dockerfile }}
-    - ${{ inputs.docker-build-args }}
+    - ${{ inputs.args }}
 branding:
   icon: 'package'
   color: 'green'
